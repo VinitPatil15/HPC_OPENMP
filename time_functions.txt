@@ -1,0 +1,40 @@
+#include<ctime>
+#include<cstdlib>
+
+clock_t start = clock();
+clock_t end = clock();
+
+
+***************************************
+
+
+
+#include <iostream>
+#include <chrono>
+
+using namespace std;
+using namespace std::chrono;
+
+// Your algorithm function
+void yourAlgorithm() {
+    // Your algorithm implementation goes here
+}
+
+int main() {
+    // Start the timer
+    auto start = high_resolution_clock::now();
+
+    // Call your algorithm
+    yourAlgorithm();
+
+    // Stop the timer
+    auto stop = high_resolution_clock::now();
+
+    // Calculate the duration in milliseconds
+    auto duration = duration_cast<milliseconds>(stop - start);
+
+    // Print the duration
+    cout << "Time taken by your algorithm: " << duration.count() << " milliseconds" << endl;
+
+    return 0;
+}
